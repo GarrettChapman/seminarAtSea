@@ -15,7 +15,7 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('../img/cruise.jpg');
+    background-image: url('../img/triumphShip.jpg');
     min-height: 700px;
 
 
@@ -24,23 +24,29 @@ body, html {
 
 /* Second image (ship) */
 .bgimg-2 {
-    background-image: url("../img/Carnaval_Splendor_deck.jpg");
+    background-image: url("../img/triumphDeck.jpg");
     min-height: 550px;
 
 }
 
 /* Third image (lounge) */
 .bgimg-3 {
-    background-image: url("https://c1.staticflickr.com/5/4087/5188015581_57ec30c8c3_b.jpg");
+    background-image: url("../img/carnFood.jpg");
     min-height: 500px;
 }
 
 .bgimg-4 {
-    background-image: url( "https://dgln9niowovwz.cloudfront.net/uploads/image/filename/694/slideshow__SplendorShip1.jpg?w=240");
+    background-image: url( "../img/carnTriumph.jpg");
     min-height: 400px;
 }
 
+th {
+  background-color: #8cf0ec;
+}
 
+table, th, td {
+   border: 1px solid black;
+}
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
