@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="styles.css">
 
-<body ng-controller="homeCtrl">
+<body ng-controller="mainCtrl">
 <head>
   <link rel="shortcut icon" href="">
 </head>
@@ -35,7 +35,7 @@
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-#8ef1e3 w3-hide w3-hide-large w3-hide-medium">
+  <div id="navDemo" class="w3-bar-block w3-#8ef1e3 w3-hide w3-hide-large w3-hide-medium" style="background-color: #8ef1e3">
     <a href="#about" class="w3-bar-item w3-button w3-hover-blue" onclick="toggleFunction()">ABOUT</a>
     <a href="#cabins" class="w3-bar-item w3-button w3-hover-blue" onclick="toggleFunction()">CABINS</a>
     <a href="#payment" class="w3-bar-item w3-button w3-hover-blue" onclick="toggleFunction()">PAYMENT</a>
@@ -47,10 +47,14 @@
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-responsive" id="home">
+  <!-- <img src="https://secure.xstreamtravel.com/img/host-logo.png" class=" w3-padding
+        w3-animate-opacity w3-responsive" alt="" style="padding-top: 100px !important;" > -->
+
   <div class="w3-display-middle  w3-transparent  w3-large w3-responsive" style="">
     <!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity ">Paycation <span class="w3-hide-small">Experience</span> 2018</span> -->
       <!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity ">Paycation <span class="w3-hide-small">Experience</span> 2018</span> -->
-
+      <!-- <img src="https://secure.xstreamtravel.com/img/host-logo.png" class=" w3-padding
+            w3-animate-opacity" alt="" style="float:left;" > -->
   </div>
 
 
@@ -789,7 +793,74 @@ GUEST INFO for guests using this card " required name="Message"> -->
 
 
 
+<script type="text/javascript">
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " background-color: #8ef1e3";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
 
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+var modal1 = document.getElementById('myModal1');
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn1 = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    // modal1.style.display = "none";
+}
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+
+    }else if (event.target == modal) {
+        modal.style.display = "none";
+
+    }
+}
+
+</script>
 
 </body>
 </html>
