@@ -297,44 +297,44 @@
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
       <h3>Capital Atrium Bar</h3>
-      <img src="/img/capitalAtriumBar.jpg"; style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="70s Party">
+      <img src="/img/capitalAtriumBar.jpg"; style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Atrium Bar">
     </div>
 
     <div class="w3-col m3">
       <h3>Monaco Casino</h3>
-      <img src="/img/clubMonacoCasino.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="80's Party">
+      <img src="/img/clubMonacoCasino.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Monaco Casino">
     </div>
 
     <div class="w3-col m3">
       <h3>Rome Show Lounge</h3>
-      <img src="/img/romeShowLounge.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" White Linen Party">
+      <img src="/img/romeShowLounge.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Rome Show Lounge">
     </div>
 
     <div class="w3-col m3">
       <h3>Kids Camp Ocean </h3>
-      <img src="/img/campOcean.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Represent KC">
+      <img src="/img/campOcean.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Kids Camp Ocean">
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
       <h3>Alchemy Bar</h3>
-      <img src="/img/alchemyBar.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Movie Night">
+      <img src="/img/alchemyBar.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Alchemy Bar">
     </div>
 
     <div class="w3-col m3">
       <h3>Vienna Cafe</h3>
-      <img src="/img/viennaCafe.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spa">
+      <img src="/img/viennaCafe.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Vienna Cafe">
     </div>
 
     <div class="w3-col m3">
-      <h3>London Dining</h3>
-      <img src="/img/londonDining.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Pool Deck">
+      <h3>London Hall</h3>
+      <img src="/img/londonDining.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="London Dining Hall">
     </div>
 
     <div class="w3-col m3">
       <h3>Rum Bar</h3>
-      <img src="/img/rumBar.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mini Golf">
+      <img src="/img/rumBar.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Rum Bar">
     </div>
 
   </div>
@@ -789,6 +789,16 @@ GUEST INFO for guests using this card " required name="Message"> -->
 
 
 <script type="text/javascript">
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
 window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
@@ -812,6 +822,7 @@ function toggleFunction() {
 
 
 // Get the modal
+
 var modal = document.getElementById('myModal');
 var modal1 = document.getElementById('myModal1');
 // Get the button that opens the modal
@@ -823,27 +834,27 @@ var span = document.getElementsByClassName("close")[0];
 var span1 = document.getElementsByClassName("close1")[0];
 
 // When the user clicks the button, open the modal
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-// btn1.onclick = function() {
-//     modal1.style.display = "block";
-// }
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
 // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-//     // modal1.style.display = "none";
-// }
-// span1.onclick = function() {
-//     modal1.style.display = "none";
-// }
+span.onclick = function() {
+    modal.style.display = "none";
+    // modal1.style.display = "none";
+}
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 window.onclick = function(event) {
     if (event.target == modal1) {
