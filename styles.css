@@ -37,8 +37,8 @@ body, html {
 }
 
 .bgimg-4 {
-    background-image: url( "../img/triumphShip.jpg");
-    min-height: 400px;
+    background-image: url( "../img/triumphSide.jpg");
+    min-height: 500px;
 }
 
 th {
