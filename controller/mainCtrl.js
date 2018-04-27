@@ -11,7 +11,7 @@ angular.module("sas, []").controller('mainCtrl', [$scope, function($scope){
     captionText.innerHTML = element.alt;
   }
 
-  // Change style of navbar on scroll
+  // style of navbar on scroll
   window.onscroll = function() {myFunction()};
   function myFunction() {
       var navbar = document.getElementById("myNavbar");
@@ -22,7 +22,7 @@ angular.module("sas, []").controller('mainCtrl', [$scope, function($scope){
       }
   }
 
-  // toggle the menu on small screens when clicking on the menu button
+  // toggle the menu  small screen
   function toggleFunction() {
       var x = document.getElementById("navDemo");
       if (x.className.indexOf("w3-show") == -1) {
@@ -32,14 +32,14 @@ angular.module("sas, []").controller('mainCtrl', [$scope, function($scope){
       }
   }
 
-  // Get the modal
+  // modal
   var modal = document.getElementById('myModal');
   var modal1 = document.getElementById('myModal1');
-  // Get the button that opens the modal
+  // button that opens the modal
   var btn = document.getElementById("myBtn");
   var btn1 = document.getElementById("myBtn1");
 
-  // Get the <span> element that closes the modal
+  //<span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
   var span1 = document.getElementsByClassName("close1")[0];
 
